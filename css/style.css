@@ -625,8 +625,11 @@ body.lock {
 }
 
 @media (max-width: 860px) {
+  .section-main__body {
+    padding: 120px 10px 20px;
+  }
   .section-main__text {
-    padding: 0 10px;
+    padding: 0 0px;
   }
   .section-main__btn {
     margin-right: 35px;
