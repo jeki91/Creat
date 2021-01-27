@@ -57,9 +57,6 @@ body.lock {
 }
 
 .logo {
-	
-	//flex: 0 1 250px;
-	//max-width: 250px;
 	width: 100%;
 	height: 137.5px;
 	margin: 65.4px 0px 25px;
@@ -240,6 +237,31 @@ body.lock {
 	.header__menu.active {
 		top: 0;
 	}
+
+	.logo {
+		
+		&:before,
+		&:after,
+		.logo-bg {
+			transition: top 0.4s;
+			background-position: 50% 90%;
+			top: -40%;
+			height: 170%;
+		}
+	}
+
+	.logo.active{
+		
+		&:before,
+		&:after,
+		.logo-bg {
+			transition: top 0.4s;
+			background-position: 50% 90%;
+			top: -50%;
+			height: 170%;
+		}
+	}
+
 	.header__ul{
 		display: block;
 		text-align: center;
@@ -298,7 +320,7 @@ body.lock {
 		}
 	}
 	&__body {
-		padding: 20px 20px;
+		padding: 100px 40px 20px;
 		height: 100%;
 		display: flex;
 		flex-direction: column;
@@ -308,6 +330,7 @@ body.lock {
 
 	&__title {
 		margin-bottom: 45px;
+		margin-top: -40px;
 	}
 
 	&__text {
@@ -315,9 +338,10 @@ body.lock {
 		text-align: center;
 		font-size: 16px;
 		line-height: 1.38;
+		padding: 0 50px;
 		color: #fff;
 		margin-bottom: 50px;
-		max-height: 500px;
+		overflow: auto;
 	}
 	&__btns {
 		display: flex;
@@ -381,11 +405,6 @@ body.lock {
 @media(max-width:1130px) {
 	.section-main__text {
 		text-align: justify;
-	}
-}
-@media(max-width:992px) {
-	.main-slider .slick-arrow {
-		display: none;
 	}
 }
 
