@@ -193,15 +193,22 @@ body.lock {
   padding: 0 20px;
 }
 
+@media (max-width: 500px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
 .title {
   font-family: 'Raleway', sans-serif;
   font-size: 30px;
   font-weight: 700;
   text-align: center;
-  color: #fff;
+  color: #000;
+  margin-bottom: 50px;
 }
 
-.title-span {
+.red-text {
   color: #ff0036;
 }
 
@@ -282,11 +289,8 @@ body.lock {
   opacity: 0.7;
 }
 
-.logo-text {
-  display: block;
-  padding-top: 130px;
-  font-size: 20px;
-  color: #fff;
+.section {
+  padding: 100px 0;
 }
 
 .header {
@@ -308,6 +312,10 @@ body.lock {
   z-index: -1;
   opacity: 0.8;
   z-index: 2;
+}
+
+.header:hover::before {
+  opacity: 1;
 }
 
 .header__body {
@@ -528,6 +536,7 @@ body.lock {
 .section-main__title {
   margin-bottom: 45px;
   margin-top: -40px;
+  color: #fff;
 }
 
 .section-main__text {
@@ -624,12 +633,12 @@ body.lock {
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 992px) {
   .section-main__body {
     padding: 120px 10px 20px;
   }
   .section-main__text {
-    padding: 0 0px;
+    padding: 0 30px;
   }
   .section-main__btn {
     margin-right: 35px;
@@ -642,6 +651,7 @@ body.lock {
   }
   .section-main__text {
     margin-bottom: 25px;
+    padding: 0 0px;
   }
   .section-main__btns {
     -webkit-box-orient: vertical;
@@ -656,4 +666,150 @@ body.lock {
     margin-right: 0px;
     margin-bottom: 25px;
   }
+}
+
+.tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tabs__item {
+  background-color: #f7f7f7;
+  border: 1px solid #e7e7e7;
+  margin-bottom: 10px;
+}
+
+.tabs-trigger {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  display: block;
+  color: #262626;
+  padding: 15px;
+  padding-left: 100px;
+  text-decoration: none;
+  border-bottom: 1px solid #e7e7e7;
+  position: relative;
+}
+
+.tabs-trigger::before, .tabs-trigger::after {
+  position: absolute;
+  content: '';
+  -webkit-transition: border .4s, background-color .4s;
+  transition: border .4s, background-color .4s;
+}
+
+.tabs-trigger::before {
+  width: 18px;
+  height: 18px;
+  border: #505050;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 21px;
+  border: 1px solid #505050;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.tabs-trigger::after {
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 60px;
+  background-color: #e7e7e7;
+}
+
+.tabs-trigger span::before, .tabs-trigger span::after {
+  position: absolute;
+  content: '';
+  background-color: #505050;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+}
+
+.tabs-trigger span::before {
+  width: 10px;
+  height: 2px;
+  left: 25px;
+}
+
+.tabs-trigger span::after {
+  width: 2px;
+  height: 10px;
+  left: 29px;
+  -webkit-transition: height .3s;
+  transition: height .3s;
+}
+
+.tabs-content {
+  display: none;
+  padding: 16px;
+  text-align: justify;
+  font-size: 14px;
+  line-height: 1.57;
+  color: #505050;
+  background-color: #fff;
+}
+
+.tabs-content.active {
+  display: block;
+}
+
+.tabs-trigger.active {
+  color: #ff0036;
+}
+
+.tabs-trigger.active::before {
+  -webkit-transition: border .3s;
+  transition: border .3s;
+  border: 1px solid #ff0036;
+}
+
+.tabs-trigger.active span::before {
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+  background-color: #ff0036;
+}
+
+.tabs-trigger.active span::after {
+  -webkit-transition: height .3s;
+  transition: height .3s;
+  background-color: #ff0036;
+  height: 0;
+}
+
+.section-about__text {
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.38;
+  color: #505050;
+  margin-bottom: 100px;
+}
+
+.section-about__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.body-about__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+}
+
+.body-about__text {
+  line-height: 1.38;
+  text-align: justify;
+  color: #505050;
+  margin-bottom: 40px;
 }

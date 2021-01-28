@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	$('.main-slider').slick({
+	$('.slider').slick({
 		responsive: [
 			{
 				breakpoint: 992,

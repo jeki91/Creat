@@ -19,10 +19,7 @@
 		<div class="container">
 			<div class="header__body">
 				<div class="header__logo-container">
-					<a href="#" class="header__logo logo">
-						<div class="logo-bg"></div>
-						<span class="logo-text"></span>
-					</a>
+					<a href="#" class="header__logo logo"></a>
 				</div>
 				<div class="header__burger">
 					<span></span>
@@ -60,13 +57,13 @@
 	</header>
 
 	<section class="section-main">
-		<div class="main-slider">
+		<div class="main-slider slider">
 			<div class="main-slider__item">
 				<div class="section-main__bg">
 					<img src="image/section-main/first-slide.jpg" alt="">
 				</div>
 				<div class="container section-main__body">
-					<h1 class="section-main__title title">why <span class="title-span">creativia ?</span></h1>
+					<h1 class="section-main__title title">why <span class="red-text">creativia ?</span></h1>
 					<p class="section-main__text">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum eros. Nulla mi ipsum, consequat commodo condimentum vitae.
 					</p>
@@ -82,7 +79,7 @@
 					<img src="image/section-main/second-slide.jpg" alt="">
 				</div>
 				<div class="container section-main__body">
-					<h1 class="section-main__title title">why <span class="title-span">creativia ?</span></h1>
+					<h1 class="section-main__title title">why <span class="red-text">creativia ?</span></h1>
 					<p class="section-main__text">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum eros. Nulla mi ipsum, consequat commodo condimentum vitae.
 						Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum eros. Nulla mi ipsum, consequat commodo condimentum vitae. Suspendisse ac vestibulum eros. Nulla mi ipsum, consequat commodo condimentum vitae
@@ -95,10 +92,59 @@
 			</div>
 		</div>
 	</section>
-	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui debitis molestiae eius id dolorem quae accusamus tempora, sint suscipit excepturi officiis atque asperiores explicabo reprehenderit ut ipsum alias molestias? Explicabo earum ullam sed sapiente libero optio consequuntur mollitia recusandae vero accusantium, facilis excepturi cum id ducimus alias ex officia quis tenetur ipsa iste ratione est. Laboriosam a voluptatem quod suscipit odit voluptates expedita nam quis. Minus, repellendus, nobis reprehenderit culpa maiores possimus distinctio autem reiciendis a suscipit hic facilis voluptates, velit rerum? Eaque nemo accusantium libero est, deserunt nam nihil asperiores odit exercitationem, praesentium ea eum itaque molestiae qui modi!</p>
+	
+	<section class="section section-about">
+		<div class="container">
+			<h2 class="title section-about__title">about <span class="red-text">creativia</span></h2>
+			<p class="section-about__text">
+				Lorem ipsum dolor sit amet, consectetur <span class="red-text">adipiscing elit.</span> Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis. 
+			</p>
+
+			<div class="section-about__body body-about">
+				<div class="body-about__item">
+					<p class="body-about__text">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum eros. Nulla mi ipsum, consequat commodo condimentum vitae, 
+					</p>
+					<div class="section-about__tabs tabs">
+						<div class="tabs__item">
+							<a href="#tab-1" class="tabs-trigger active"><span></span>Hwo is creativia</a>
+							<div id="tab-1" class="tabs-content active">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum eros.
+							</div>
+						</div>
+						<div class="tabs__item">
+							<a href="#tab-2" class="tabs-trigger"><span></span>Experiences</a>
+							<div id="tab-2" class="tabs-content">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat.
+							</div>
+						</div>
+						<div class="tabs__item">
+							<a href="#tab-3" class="tabs-trigger"><span></span>Learn more</a>
+							<div id="tab-3" class="tabs-content">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum eros. Suspendisse ac vestibulum eros.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="body-about__item">
+					<div class="section-about__images"></div>
+				</div>
+				
+			</div>
+			<div class="section-about__columns">
+				<div class="section-about__item item-about">
+					<div class="item-about__img"></div>
+					<h3 class="item-about__title">FLAT DESIGN</h3>
+					<p class="item-about__text">Lorem ipsum dolor sit amet cras vitae sodales ac nec prellentesque vivamus eget mauris fusce sit amet  </p>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/script.js"></script>
+	<script src="js/tabs.js"></script>
 	<script src="js/burger.js"></script>
 </body>
 
