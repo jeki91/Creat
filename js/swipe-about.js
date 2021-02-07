@@ -44,8 +44,8 @@ event.stopPropagation();
 initialPoint=event.changedTouches[0];
 }, false);
 swipe.addEventListener('touchend', function(event) {
-event.preventDefault();
-event.stopPropagation();
+//event.preventDefault();
+//event.stopPropagation();
 finalPoint=event.changedTouches[0];
 var xAbs = Math.abs(initialPoint.pageX - finalPoint.pageX);
 var yAbs = Math.abs(initialPoint.pageY - finalPoint.pageY);
@@ -142,13 +142,21 @@ blocks[elemIndex].classList.add('active');
 blocks[prew].classList.add('prew');
 blocks[next].classList.add('next');	
 
-}
+};
 }
 else {
 if (finalPoint.pageY < initialPoint.pageY){
-/*СВАЙП ВВЕРХ*/}
+/*СВАЙП ВВЕРХ*/
+$('html, body').animate({
+	scrollTop: $('.item-about__title').offset().top - 100
+}, 500);
+}
 else{
-/*СВАЙП ВНИЗ*/}
+/*СВАЙП ВНИЗ*/
+$('html, body').animate({
+	scrollTop: $('.body-about__item').offset().top
+}, 500);
+}
 }
 }
 }, false);
