@@ -1,6 +1,9 @@
 $(document).ready(function(){
 
+	
+
 	$('.slider').slick({
+	
 		responsive: [
 			{
 				breakpoint: 992,
@@ -10,5 +13,4 @@ $(document).ready(function(){
 			}
 		]
 	});
-
 });

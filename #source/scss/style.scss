@@ -530,7 +530,7 @@ body.lock {
 	display: none;
 	padding: 16px;
 	text-align: justify;
-	font-size: 14px;
+	font-size: 12px;
 	line-height: 1.57;
 	color:#505050;
 	background-color: #fff;
@@ -571,6 +571,7 @@ body.lock {
 		}
 
 		&__text {
+			
 			text-align: center;
 			font-weight: 700;
 			line-height: 1.38;
@@ -583,6 +584,7 @@ body.lock {
 		}
 
 		&__tabs {
+			margin-right: 30px;
 		}
 
 		&__images {
@@ -602,16 +604,19 @@ body.lock {
 .red-text {
 }
 .body-about {
-
+	margin-bottom: 100px;
+	overflow: hidden;
 		&__item {
 			flex: 1 1 50%;
 		}
 
 		&__text {
 			line-height: 1.38;
+			font-size: 14px;
 			text-align: justify;
 			color: #505050;
 			margin-bottom: 40px;
+			margin-right: 30px;
 		}
 }
 .tabs {
@@ -634,4 +639,89 @@ body.lock {
 
 		&__text {
 		}
+}
+
+.slider-about {
+	justify-content: center;
+	position: relative;
+	width: 100%;
+	height: 420px;
+	
+	
+}
+.slider-about__container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+.slider-about__item {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: 380px;
+	height: 380px;
+	background-color: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 50px;
+	z-index: -10;
+	transition: all 0.4s;
+	
+	img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+		overflow: hidden;
+	}
+	&:before,
+	&:after {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+	}
+
+	&:before{
+		background: #fff;
+		transform: scale(1.04);
+		overflow: hidden;
+	}
+
+	&:after {
+		background-color: #000;
+		opacity: 0.7;
+		transition: opacity 0.4s;
+	}
+}
+
+.slider-about__item.active {
+	z-index: 2;
+	transform: scale(1.1) translate(-45%, 0);
+	transition: all 0.4s;
+	&::after {
+		opacity: 0;
+	}
+}
+
+.slider-about__item.prew {
+	transform: translate(0, 0);
+	left:	0px;
+	z-index: 1;
+	transition: all 0.4s;
+}
+.slider-about__item.next {
+	transform: translate(0, 0);
+	left: 200px;
+	z-index: 1;
+	transition: all 0.4s;
 }

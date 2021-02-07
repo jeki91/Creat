@@ -11,11 +11,16 @@
 /* Лента слайдов */
 .slick-track{
 	display: flex;
+	
+	
 }
 /* Слайд */
-.slick-slide{}
+.slick-slide{
+	
+}
 /* Слайд активный (показывается) */
-.slick-slide.slick-active{}
+.slick-slide.slick-active{
+}
 /* Слайд основной */
 .slick-slide.slick-current{}
 /* Слайд по центру */
