@@ -987,4 +987,7 @@ body.lock {
     width: 320px;
     height: 200px;
   }
+  .slider-about {
+    height: 200px;
+  }
 }
