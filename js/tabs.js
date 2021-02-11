@@ -21,9 +21,10 @@ $(document).ready(function(){
 	$('.tabs-trigger').click(function(e){
 		e.preventDefault();
 
-		$(this).toggleClass('active');
-		$($(this).attr('href')).toggleClass('active');
+		$('.tabs-trigger').removeClass('active');
+		$('.tabs-content').removeClass('active');
 
+		$(this).addClass('active').fadeIn();
+		$($(this).attr('href')).addClass('active');
 	});
-	
-});
+});	
